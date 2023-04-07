@@ -6,6 +6,7 @@ const ExpressError= require('./utilities/ExpressError');
 const mongoose= require('mongoose');
 
 const courseRoutes=require('./routes/courses');
+const commentRoutes= require('./routes/comment');
 // const methodOverride= require('method-override');
 const flash= require('connect-flash');
 
@@ -22,6 +23,8 @@ db.once("open", () => {
 });
 
 app.use('/courses', courseRoutes);
+app.use('/courses/:id/reviews', commentRoutes);
+
 
 
 app.all('*', (req, res, next) => {
