@@ -7,7 +7,7 @@ const mongoose= require('mongoose');
 
 const courseRoutes=require('./routes/courses');
 // const methodOverride= require('method-override');
-// const flash= require('connect-flash');
+const flash= require('connect-flash');
 
 
 mongoose.connect('mongodb+srv://womenshack:womenshack@cluster0.tqatzct.mongodb.net/test', 

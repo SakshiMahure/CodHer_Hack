@@ -10,4 +10,8 @@ router.get('/:id',  catchAsync(courses.showCourse));
 
 
 
+router.put('/:id/wishlist', catchAsync(courses.addToWishlist));
+
+router.put('/:id/likes', catchAsync(books.likes));
+
 module.exports=router;

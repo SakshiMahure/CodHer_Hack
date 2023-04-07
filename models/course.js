@@ -26,7 +26,13 @@ const CourseSchema=new Schema({
         type:String,
         required: true,
     },
-    images: String
+    images: String,
+    course_likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }] 
+    
+    
 
 
 })
