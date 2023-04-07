@@ -30,10 +30,13 @@ const CourseSchema=new Schema({
     course_likes: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
-    }] 
+    }],
+    comment: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Comment' 
+        }
+    ]
     
-    
-
-
 })
 module.exports= mongoose.model('Course', CourseSchema);
