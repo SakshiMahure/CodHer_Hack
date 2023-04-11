@@ -16,7 +16,7 @@ db.once("open", () => {
 
 
 const seedCoursesDb = async() => {
-    //await Course.deleteMany({});
+    await Course.deleteMany({});
     for (let i=0; i<8; i++)
     {
         const C = new Course({
@@ -27,7 +27,8 @@ const seedCoursesDb = async() => {
             price:`${courses[i].price}`,
             instructor:`${courses[i].instructor}`,
             offered_by:`${courses[i].offered_by}`,
-            images:`${courses[i].images}`
+            images:`${courses[i].images}`,
+            course_link:`${courses[i].course_link}`
         })
         await C.save();
     }
